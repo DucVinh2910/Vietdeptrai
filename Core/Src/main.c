@@ -104,6 +104,7 @@ int main(void)
 //  	HAL_USART_Receive_IT(&husart2,&echo_receive_data,1);
 
     char msg[] = "Hello USART!\r\n";
+    char msg1[] = "Hello SPI!\r\n";
     uint8_t rx_length = sizeof(rx_buffer);
     HAL_UART_Transmit(&huart1, (uint8_t *)msg, strlen(msg), HAL_MAX_DELAY);
   /* USER CODE END 2 */
@@ -113,7 +114,7 @@ int main(void)
   while (1)
   {
 
-	  HAL_SPI_Transmit(&hspi1, &tx_buffer, 1 ,HAL_MAX_DELAY);
+	  HAL_SPI_Transmit(&hspi1, (uint8_t *)msg1, strlen(msg1) ,HAL_MAX_DELAY);
 	  // Nhận dữ liệu (blocking, đợi tới khi nhận đủ rx_length byte)
 //	      if (HAL_SPI_Transmit(&hspi1, &tx_buffer, 1 ,HAL_MAX_DELAY) == HAL_OK)
 //	      {
