@@ -113,13 +113,13 @@ int main(void)
   while (1)
   {
 
-
+	  HAL_SPI_Transmit(&hspi1, &tx_buffer, 1 ,HAL_MAX_DELAY);
 	  // Nhận dữ liệu (blocking, đợi tới khi nhận đủ rx_length byte)
-	      if (HAL_SPI_Transmit(&hspi1, &tx_buffer, 1 ,HAL_MAX_DELAY) == HAL_OK)
-	      {
+//	      if (HAL_SPI_Transmit(&hspi1, &tx_buffer, 1 ,HAL_MAX_DELAY) == HAL_OK)
+//	      {
 	          // Gửi lại dữ liệu nhận được
 //	          HAL_UART_Transmit(&huart1, &tx_buffer, 1, HAL_MAX_DELAY);
-	      }
+//	      }
 
 	  HAL_Delay(1000);
     /* USER CODE END WHILE */
