@@ -118,7 +118,7 @@ int main(void)
 	      if (HAL_SPI_Transmit(&hspi1, &tx_buffer, 1 ,HAL_MAX_DELAY) == HAL_OK)
 	      {
 	          // Gửi lại dữ liệu nhận được
-	          HAL_UART_Transmit(&huart1, &tx_buffer, 1, HAL_MAX_DELAY);
+//	          HAL_UART_Transmit(&huart1, &tx_buffer, 1, HAL_MAX_DELAY);
 	      }
 
 	  HAL_Delay(1000);
